@@ -11,7 +11,7 @@ local_settings.py
 .env
 
 # Virtual env
-venv/
+env/
 
 # Database
 *.sqlite3
