@@ -5,8 +5,8 @@ name = "pypi"
 
 [packages]
 pip = "*"
-install = "*"
 python-dotenv = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 
