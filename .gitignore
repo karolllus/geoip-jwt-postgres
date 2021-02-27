@@ -6,14 +6,13 @@ __pycache__/
 
 # Local files
 local_settings.py
+unused/
 
 # Dot files
 .env
 
 # Virtual env
 env/
-Pipfile
-Pipfile.lock
 
 # Database
 *.sqlite3
