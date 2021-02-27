@@ -1,9 +1,20 @@
-  
+# Caches and logs
 *.log
 *.pot
 *.pyc
-.env
 __pycache__/
+
+# Local files
 local_settings.py
-db.sqlite3
+
+# Dot files
+.env
+
+# Virtual env
 venv/
+
+# Database
+*.sqlite3
+
+# Text backup files
+*.bak
