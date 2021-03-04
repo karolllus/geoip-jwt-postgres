@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import dj_database_url
 import os, json, dotenv
 from pathlib import Path
 
@@ -84,10 +84,14 @@ DATABASES = {
     }
 }
 
-json_file = os.path.join(Path(__file__).resolve().parent, "databases.json")
+json_file = os.path.join(BASE_DIR, "databases.json")
 if os.path.isfile(json_file):
     with open(json_file) as f:
         DATABASES = json.load(f)
+else:
+    # Heroku: Update database configuration from $DATABASE_URL.
+    db_from_env = dj_database_url.config(conn_max_age=500)
+    DATABASES['default'].update(db_from_env)
 
 
 # Password validation
@@ -135,8 +139,3 @@ STATIC_URL = '/static/'
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-# Heroku: Update database configuration from $DATABASE_URL.
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
