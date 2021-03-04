@@ -8,8 +8,9 @@ __pycache__/
 local_settings.py
 unused/
 
-# Dot files
+# Environment files
 .env
+databases.json
 
 # Virtual env
 env/
@@ -19,3 +20,6 @@ env/
 
 # Text backup files
 *.bak
+
+# test files
+test.py
