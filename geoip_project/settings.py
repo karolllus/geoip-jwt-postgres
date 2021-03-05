@@ -93,6 +93,8 @@ else:
     db_from_env = dj_database_url.config(conn_max_age=500)
     DATABASES['default'].update(db_from_env)
 
+DATABASES['default']['ENGINE'] = 'django.contrib.gis.db.backends.postgis'
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
