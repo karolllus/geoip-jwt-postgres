@@ -140,6 +140,6 @@ STATIC_URL = '/static/'
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# Heroku geospatial environment variables
-GDAL_LIBRARY_PATH = os.environ.get('GDAL_LIBRARY_PATH')
-GEOS_LIBRARY_PATH = os.environ.get('GEOS_LIBRARY_PATH')
+# # Heroku geospatial environment variables
+# GDAL_LIBRARY_PATH = os.environ.get('GDAL_LIBRARY_PATH')
+# GEOS_LIBRARY_PATH = os.environ.get('GEOS_LIBRARY_PATH')
