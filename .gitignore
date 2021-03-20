@@ -10,20 +10,26 @@ unused/
 
 # Environment files
 .env
-databases.json
-
-# Virtual env
 env/
 
 # Database
 *.sqlite3
+databases.json
 
 # Text backup files
 *.bak
 
 # test files
-api_app/test.py
-views1.py
-views2.py
-views3.py
-views4.py
+api_app/tests.py
+api_app/views1.py
+api_app/views2.py
+api_app/views3.py
+api_app/views4.py
+
+# Visual Studio Code # 
+.vscode/* 
+!.vscode/settings.json 
+!.vscode/tasks.json 
+!.vscode/launch.json 
+!.vscode/extensions.json 
+.history
