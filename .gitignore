@@ -20,7 +20,6 @@ databases.json
 *.bak
 
 # test files
-api_app/tests.py
 api_app/views1.py
 api_app/views2.py
 api_app/views3.py
