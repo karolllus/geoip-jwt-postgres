@@ -22,7 +22,7 @@ env/
 *.bak
 
 # test files
-test.py
+api_app/test.py
 views1.py
 views2.py
 views3.py
