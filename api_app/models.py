@@ -4,18 +4,17 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
+    """ Craete extension postigs"""
 
     operations = [
         CreateExtension('postgis'),
         ...
     ]
 
-class Casino(models.Model):
-    name = models.CharField(max_length=50)
-    address = models.CharField(max_length=255)
-    location = models.PointField(null=True, blank=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    modified_at = models.DateTimeField(auto_now=True)
+
+class GeoModel(models.Model):
+    """ Database model for Geolocalization"""
+    ip = models.GenericIPAddressField(null=False)
 
     def __str__(self):
-        return self.name
+        return self.ip

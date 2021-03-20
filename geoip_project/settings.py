@@ -39,8 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'api_app',
     'django.contrib.gis',
+    'rest_framework',
+    'api_app',
 ]
 
 MIDDLEWARE = [
@@ -142,7 +143,3 @@ STATIC_URL = '/static/'
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-# # Heroku geospatial environment variables
-# GDAL_LIBRARY_PATH = os.environ.get('GDAL_LIBRARY_PATH')
-# GEOS_LIBRARY_PATH = os.environ.get('GEOS_LIBRARY_PATH')

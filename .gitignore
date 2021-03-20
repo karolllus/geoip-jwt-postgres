@@ -23,3 +23,7 @@ env/
 
 # test files
 test.py
+views1.py
+views2.py
+views3.py
+views4.py
