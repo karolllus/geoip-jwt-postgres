@@ -12,7 +12,7 @@ from rest_framework.urlpatterns import format_suffix_patterns
 # For class based - API view
 urlpatterns = [
     path('list/', views.geomodel_list.as_view()),
-    path('detail/<int:id>', views.geomodel_detail.as_view())
+    path('detail/<int:pk>', views.geomodel_detail.as_view())
 ]
 
 
