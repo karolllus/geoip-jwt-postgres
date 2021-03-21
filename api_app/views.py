@@ -28,7 +28,7 @@ class geomodel_list(APIView):
             validate(url)
             response = requests.get(URL.format(ip=url.split('//')[1]))
             message = response.json()
-        except requests.ConnectionError as exception:
+        except:
             response = requests.get(URL.format(ip=request.data['ip']))
             message = response.json()
 

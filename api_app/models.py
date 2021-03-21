@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
 
 class GeoModel(models.Model):
     """ Database model for Geolocalization"""
-    url = models.URLField(null=True, blank=True, default='')
+    url = models.CharField(null=True, blank=True, default='', max_length=255)
     ip = models.GenericIPAddressField(null=True, blank=True, default='')
     type = models.CharField(null=True, blank=True, max_length=4, default='')
     continent_code = models.CharField(null=True, blank=True, max_length=4, default='')

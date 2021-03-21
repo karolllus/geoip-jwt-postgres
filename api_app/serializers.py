@@ -5,7 +5,7 @@ from api_app.models import GeoModel
 class GeoModelSerializer(serializers.Serializer):
     """Geolocation Model Serializer"""
     id = serializers.IntegerField()
-    url = serializers.URLField(required=False, allow_blank=True)
+    url = serializers.CharField(required=False, allow_blank=True)
     ip = serializers.IPAddressField(required=False)
     type = serializers.CharField(required=False)
     continent_code = serializers.CharField(required=False)
